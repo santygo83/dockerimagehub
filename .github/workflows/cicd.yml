@@ -63,7 +63,7 @@ jobs:
         context: .
         file: ./DockerFile
         push: true
-        tags: ghcr.io/${{ github.actor }}/flasktest-app:latest
+        tags: ghcr.io/${{ github.actor }}/flasktest-app:${{ github.sha }}
 
     - name: Image digest
       run: echo ${{ steps.build-and-publish.outputs.digest }}
