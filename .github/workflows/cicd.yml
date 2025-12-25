@@ -75,7 +75,7 @@ jobs:
 
       - name: Update image tag in pod.yaml
         run: |
-          sed -i "s|image: .*|image: ghcr.io/${{ github.actor }}/flasktest-app:${{ github.sha }}|" pod.yaml
+          sed -i "s|^\([[:space:]]*image:\).*|\1 ghcr.io/${{ github.actor }}/flasktest-app:${{ github.sha }}|" pod.yaml
 
       - name: Commit and push changes
         run: |
