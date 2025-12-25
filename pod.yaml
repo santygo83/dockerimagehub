@@ -16,7 +16,7 @@ spec:
       - name: ghcr-secret   # remove if image is public
       containers:
       - name: donkey-pod
-        image: ghcr.io/santygo83/flasktest-app:eeca1048a3fcb2976c7c72bb59ac82a8f87071f7
+        image: ghcr.io/santygo83/flasktest-app:6df409c02a3d2df386598b87fa039618cb6a91e1
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
